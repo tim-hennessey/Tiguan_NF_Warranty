@@ -1,0 +1,160 @@
+body {
+    background: #fafafa;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #555;
+}
+
+#banner {
+    background: #111;
+    position: absolute;
+    overflow: hidden;
+    width: $banner-width;
+    height: $banner-height;
+    left: 50%;
+    top: 50%;
+    margin-left: -$banner-width / 2;
+    margin-top: -$banner-height / 2;
+
+    #button-exit {
+        background-color: rgba(255, 255, 255, 0);
+        cursor: pointer;
+        height: 100%;
+        left: 0px;
+        position: absolute;
+        top: 0px;
+        width: 100%;
+    }
+
+    #button-legal {
+        background-color: rgba(255, 255, 255, 0);
+        cursor: pointer;
+        height: 12px;
+        width: 80px;
+        left: 11px;
+        top: 485px;
+        position: absolute;
+    }
+
+    #border {
+        border: 3px solid #FFFFFF;
+        display: block;
+        width: $banner-width - 6;
+        height: $banner-height - 6;
+        left: 0;
+        top: 0;
+        pointer-events: none;
+        position: absolute;
+        z-index: 999;
+    }
+
+    #border2 {
+        border: 1px solid #000000;
+        display: block;
+        width: $banner-width - 2;
+        height: $banner-height - 2;
+        left: 0;
+        top: 0;
+        pointer-events: none;
+        position: absolute;
+        z-index: 999;
+    }
+
+    #curtain {
+        left: 0;
+        top: 0;
+        width: $banner-width;
+        height: $banner-height;
+        background-color: rgba(255, 255, 255, 1);
+        pointer-events: none;
+        position: absolute;
+    }
+
+    #tig1 {
+        left: 0;
+        top: 0;
+        transform: translate3d(0, 0, 0.1px);
+        position: absolute;
+    }
+
+    #txt1 {
+        left: 20px;
+        top: 25px;
+        opacity: 0;
+        position: absolute;
+    }
+
+    #txt2 {
+        left: 20px;
+        top: 25px;
+        opacity: 0;
+        position: absolute;
+    }
+
+    #hero {
+        left: 0;
+        top: 0;
+        opacity: 0;
+        position: absolute;
+    }
+
+    #legal {
+        left: 0;
+        top: 0;
+        width: $banner-width;
+        height: $banner-height;
+        background-color: rgba(0, 0, 0, .8);
+        opacity: 0;
+        position: absolute;
+
+        #legal_txt {
+            left: 10px;
+            top: 10px;
+            position: absolute;
+        }
+    }
+
+    #legal_btn_txt {
+        left: 10px;
+        top: 485px;
+        opacity: 0;
+        position: absolute;
+    }
+
+    #footer {
+        background: #FFFFFF;
+        right: 0;
+        bottom: 0;
+        width: $banner-width;
+        height: 95px;
+        position: absolute;
+
+        #cta_arrow {
+            left: 12px;
+            bottom: 25px;
+            clip: rect(0px, 88px, 11px, 78px);
+            opacity:0;
+            position: absolute;
+        }
+
+        #cta_txt {
+            left: 12px;
+            bottom: 25px;
+            clip: rect(0px, 78px, 11px, 0px);
+            opacity:0;
+            position: absolute;
+        }
+
+        #warranty {
+            left: 12px;
+            bottom: 6px;
+            opacity:0;
+            position: absolute;
+        }
+
+        #logo {
+            right: 8px;
+            bottom: 8px;
+            position: absolute;
+        }
+    }
+}
