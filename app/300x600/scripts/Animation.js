@@ -14,7 +14,10 @@ app.Animation = (function () {
         hero,
         cta_arrow,
         cta_txt,
-        legal;
+        legal,
+        legal_btn_txt_2,
+        line,
+        buttonLegal2;
 
     // --------------------------------------------------------------------------------------
     // set default properties
@@ -32,6 +35,9 @@ app.Animation = (function () {
         cta_arrow = document.getElementById('cta_arrow');
         cta_txt = document.getElementById('cta_txt');
         legal = document.getElementById('legal');
+        legal_btn_txt_2 = document.getElementById('legal_btn_txt_2');
+        line = document.getElementById('line');
+        buttonLegal2 = document.getElementById('button-legal2');
 
         buttonExit.addEventListener('mouseover', function () {
             TweenMax.to(cta_arrow, .25, {x: 5, ease: Sine.easeOut});
@@ -44,16 +50,18 @@ app.Animation = (function () {
     // Starts the animation
     function start() {
         tl.to(curtain, .5, {opacity: 0})
-            .to(tig1, 5, {x: "-=185", ease: Sine.easeInOut}, "+=.5")
-            .to(txt1, 1, {opacity: 1}, "-=1")
+            .to(tig1, 5, {x: "+=185", ease: Sine.easeInOut}, "+=.5")
+            .to(txt1, 1, {opacity: 1}, "-=4")
             .to(legal_btn_txt, 1, {opacity: 1, onComplete:addLegal}, "-=1")
             .to(warranty, 1, {opacity: 1}, "-=1")
-            .to(txt1, .5, {opacity: 0}, "+=3")
+            .to(txt1, .5, {opacity: 0}, "+=1")
             .to(txt2, .5, {opacity: 1})
             .to(hero, 1, {opacity: 1, onComplete:removeLegal}, "+=3")
             .to(warranty, .5, {opacity: 0}, "-=1")
             .to(cta_txt, .5, {opacity: 1})
             .to(cta_arrow, .5, {opacity: 1}, "-=.5")
+            .to(legal_btn_txt_2, .5, {opacity: 1}, "-=.5")
+            .to(line, .5, {opacity: 1}, "-=.5");
     }
 
     function legalOverFunc() {
@@ -72,8 +80,11 @@ app.Animation = (function () {
     function removeLegal() {
         buttonLegal.removeEventListener('mouseover', legalOverFunc, true);
         buttonLegal.removeEventListener('mouseout', legalOutFunc, true);
-        TweenMax.to(legal, .25, {opacity: 0});
+        buttonLegal2.addEventListener('mouseover', legalOverFunc, true);
+        buttonLegal2.addEventListener('mouseout', legalOutFunc, true);
         buttonLegal.style.pointerEvents = "none";
+        buttonLegal2.style.pointerEvents = "auto";
+        TweenMax.to(legal, .25, {opacity: 0});
     }
 
     // --------------------------------------------------------------------------------------
