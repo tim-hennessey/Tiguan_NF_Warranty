@@ -31,7 +31,18 @@ body {
         height: 12px;
         width: 80px;
         left: 11px;
-        top: 175px;
+        top: 70px;
+        position: absolute;
+    }
+
+    #button-legal2 {
+        background-color: rgba(0, 0, 0, 0);
+        cursor: pointer;
+        pointer-events: none;
+        height: 12px;
+        width: 80px;
+        left: 465px;
+        top: 70px;
         position: absolute;
     }
 
@@ -70,9 +81,19 @@ body {
     }
 
     #tig1 {
-        left: -30px;
-        top: -50px;
-        transform: translate3d(0, 0, 0.1px);
+        left: -10px;
+        top: 0;
+        transform: scale(1.2) translate3d(0, 0, 0.1px);
+        position: absolute;
+    }
+
+    #vignette {
+        left: 0;
+        top: 0;
+        width: $banner-width;
+        height: $banner-height;
+        background: linear-gradient(90deg, rgba(0,0,0,1) 0%,rgba(0,0,0,0) 25%,rgba(0,0,0,0) 75%);
+        opacity: 0;
         position: absolute;
     }
 
@@ -85,7 +106,7 @@ body {
 
     #txt2 {
         left: 10px;
-        top: 15px;
+        top: 12px;
         opacity: 0;
         position: absolute;
     }
@@ -115,7 +136,7 @@ body {
 
     #legal_btn_txt {
         left: 10px;
-        top: 175px;
+        top: 70px;
         opacity: 0;
         position: absolute;
     }
@@ -128,17 +149,31 @@ body {
         height: $banner-height;
         position: absolute;
 
-        #cta_arrow {
+        #legal_btn_txt_2 {
             left: 12px;
-            bottom: 25px;
+            bottom: 10px;
+            opacity:0;
+            position: absolute;
+        }
+
+        #line {
+            left: 97px;
+            bottom: 4px;
+            opacity:0;
+            position: absolute;
+        }
+
+        #cta_arrow {
+            left: 110px;
+            bottom: 10px;
             clip: rect(0px, 88px, 11px, 78px);
             opacity:0;
             position: absolute;
         }
 
         #cta_txt {
-            left: 12px;
-            bottom: 25px;
+            left: 110px;
+            bottom: 10px;
             clip: rect(0px, 78px, 11px, 0px);
             opacity:0;
             position: absolute;
@@ -146,7 +181,7 @@ body {
 
         #warranty {
             left: 12px;
-            bottom: 6px;
+            bottom: 10px;
             opacity:0;
             position: absolute;
         }
