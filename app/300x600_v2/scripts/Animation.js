@@ -50,7 +50,7 @@ app.Animation = (function () {
     // Starts the animation
     function start() {
         tl.to(curtain, .5, {opacity: 0})
-            .to(tig1, 5, {scale:.7, x: "+=102", y:"+=110", ease: Sine.easeInOut}, "+=.5")
+            .to(tig1, 5, {scale:.7, x: "+=102", y:"+=110", ease: Sine.easeOut}, "-=.5")
             .to(txt1, 1, {opacity: 1}, "-=4")
             .to(legal_btn_txt, 1, {opacity: 1, onComplete:addLegal}, "-=1")
             .to(warranty, 1, {opacity: 1}, "-=1")
